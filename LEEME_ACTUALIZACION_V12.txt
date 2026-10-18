@@ -1,0 +1,68 @@
+FV360 STUDIO — ACTUALIZACION DE INTERFAZ v12 (PC) / v9 (Mobile)
+=============================================================
+
+Esta versión parte directamente de PC v11 y Mobile v8.
+No se eliminan módulos ni cambia la estructura de los archivos JSON/ZIP.
+
+MEJORAS REALIZADAS
+------------------
+1. TABLA DXF: la vista previa se recalcula al medir, agregar rutas y cambiar
+   de reporte. Encima de la tabla aparecen el total de categorías elegidas y
+   el total general de metros registrados en el reporte activo. La selección
+   de filas del DXF continúa funcionando igual que antes.
+2. DISTRIBUCION: el panel derecho usa toda la altura disponible en escritorio
+   y mantiene sus pestañas a la vista. Las opciones pueden desplazarse dentro
+   de ese panel. En teléfono se conserva el orden vertical para desplazarse
+   con el dedo y los controles compactos.
+3. DIALOGOS FV360: los nombres de proyectos, confirmaciones de eliminación,
+   avisos de preferencias y ayuda utilizan ahora cuadros propios de FV360.
+   Los permisos del navegador, los selectores de archivos y las protecciones
+   nativas al cerrar una pestaña siguen controlados por el sistema por seguridad.
+4. BARRA SUPERIOR PC: Guardar, Guardar como, Ajustes y Nuevo proyecto quedan
+   en la misma fila. Abrir JSON/ZIP, Guardar JSON y Guardar ZIP continúan en
+   un nuevo menu Archivo. En móvil, los botones mantienen sus accesos.
+5. ZOOM: el visor tiene control deslizante, botones +/-, restablecer y rueda del
+   mouse. Funciona con fotos 360 y con fotos verticales/horizontales. En foto
+   plana, arrastrar permite desplazar el encuadre cuando hay aumento; los
+   gestos de pellizcar en modo Navegar también modifican el zoom.
+
+NOVEDADES DE COMPATIBILIDAD
+--------------------------
+- Fotos planas: zoom y desplazamiento guardados con la foto y en las vistas
+  nuevas del reporte. No se altera la longitud introducida de cada tramo.
+- Reportes existentes: las vistas antiguas sin datos de zoom se interpretan a
+  100%. Conservan sus medidas, capas y fotografías.
+- DXF: sigue exportando la tabla de distancias en DXF R12; los dibujos CAD no
+  se convierten automáticamente en geometría medida.
+- Calidad: ampliar una foto no crea detalle que no exista en el original.
+
+INSTALACION
+-----------
+PC: extraer la carpeta completa y abrir index.html.
+Mobile: respaldar primero proyectos JSON/ZIP, extraer la carpeta nueva y
+subir TODOS los archivos a la raiz de tu repositorio GitHub Pages, incluidos
+'fv360-polish.css', 'fv360-polish.js' y el nuevo 'sw.js'. Esperar a que
+termine la publicacion. Abrir FV360 con internet para actualizar el cache.
+No borres datos de Safari/Chrome ni desinstales la PWA para forzar una
+actualizacion: los proyectos locales podrian perderse.
+
+PRUEBAS REALIZADAS EN NAVEGADOR AUTOMATIZADO
+---------------------------------------------
+- Fotos verticales, trazado y cotas con 18.75 y 42.30 m: sumas correctas.
+- Vista previa CAD, filtros y actualizacion inmediata al medir.
+- Exportaciones PNG con fotografia y trazos, JSON completo y tablas DXF.
+- DXF auditado con ezdxf sin errores.
+- Panorama DJI original y reportes PDF multipagina.
+- Controles de zoom en panoramica y fotografia convencional.
+- Ventanas internas para nombres y confirmaciones.
+- Panel inspector con altura de pantalla en escritorio.
+
+PENDIENTE DE VALIDAR EN EQUIPOS REALES
+-------------------------------------
+- Rendimiento de gestos en iPhone/Android, descarga a Archivos y ciclo de
+  actualizacion PWA de GitHub Pages.
+- Apertura del DXF directamente en tu AutoCAD, aunque auditoria automatica
+  paso sin errores.
+
+FV360 es una herramienta de representacion esquematica y levantamientos de
+medidas tomadas en sitio. Una fotografia por si sola no esta a escala real.

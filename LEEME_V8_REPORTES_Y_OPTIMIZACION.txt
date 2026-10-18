@@ -1,0 +1,42 @@
+FV360 STUDIO - NUEVA VERSION CON REPORTES INDEPENDIENTES
+====================================================
+Compatibilidad: FV360 PC v7 / FV360 Mobile v4 y sus proyectos JSON/ZIP.
+
+NOVEDADES
+1) Reportes independientes en un mismo proyecto: selecciona el reporte activo, usa
+   "+ Nuevo reporte" o "Duplicar reporte". Cada reporte conserva sus propias
+   trayectorias, mediciones, anotaciones y orden de laminas; comparte las fotos
+   originales para no duplicar almacenamiento. Al eliminar un reporte, se borran
+   sus vistas/rutas/notas, pero permanecen los otros reportes y las fotos fuente.
+2) Organizador de fotografias: arrastra el asa de cada lamina para reordenarla.
+   Se mantiene la alternativa de flechas arriba/abajo y teclado sobre el asa.
+3) Notas: toca el texto en la fotografia para editarlo directamente. Ajusta el
+   recuadro arrastrando su esquina inferior derecha. Los controles tipograficos
+   originales permanecen disponibles en la seccion avanzada.
+4) Herramientas compactas: el tipo de linea se elige en un catalogo desplegable,
+   separado del grosor; los ajustes menos frecuentes de cotas y tipografia
+   se pueden expandir cuando los necesites.
+
+FUNCIONES QUE SE CONSERVAN
+Visor 360, fotos planas/verticales, trazado, vertices, longitudes manuales,
+capas/categorias, figuras y poligonos, PNG superpuestos, notas, mediciones,
+totales, reportes PDF, PNG individuales, ZIP de laminas, JSON y ZIP de proyecto,
+tablas de distancias DXF R12, CSV y editor fotografico.
+
+IMPORTANTE PARA EL REPORTE
+Cuando cambies la propuesta activa, cambian los trazos, anotaciones, medidas,
+totales y las laminas visibles. Los reportes se exportan por separado, con el
+nombre del reporte en el archivo. El proyecto JSON/ZIP incluye TODOS los reportes.
+La medicion real sigue siendo el valor tomado en campo, no una escala inferida
+por la fotografia.
+
+SEGURIDAD Y ACTUALIZACION
+1. Guarda primero un ZIP de respaldo desde la version anterior.
+2. Reemplaza los archivos del sitio (mobile) / carpeta local (PC) manteniendo
+   index.html junto a los demas scripts, CSS y la carpeta de iconos.
+3. En Mobile: espera a que GitHub Pages publique y abre la pagina con internet.
+   Se actualizo la version de cache del service worker.
+4. No desinstales la app ni borres los datos de Safari/Chrome: se podrian borrar
+   levantamientos locales. Exporta siempre un respaldo externo JSON/ZIP.
+5. Los controles se probaron en navegador automatizado Chromium; los gestos
+   de arrastre y uso offline deben confirmarse en iPhones/Android reales.

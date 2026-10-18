@@ -1,0 +1,45 @@
+FV360 STUDIO - ACTUALIZACIÓN DE ANOTACIONES / CATEGORÍAS
+======================================================
+CAMBIOS AÑADIDOS SIN CAMBIAR EL MOTOR EXISTENTE
+
+1. Panel OBJETOS y acceso en la barra de herramientas:
+   - RECTÁNGULO / CÍRCULO: selecciona y arrastra sobre la fotografía.
+   - NOTA: escribe en el campo de texto, selecciona Nota y toca dónde ubicarla.
+   - IMAGEN PNG: pulsa Elegir imagen PNG del equipo (máximo 12 MB), luego toca
+     el lugar sobre la fotografía. Solo archivos PNG válidos.
+   - EDITAR OBJETOS: selecciona el elemento y arrástralo para moverlo; arrastra
+     la esquina inferior derecha para ajustar su tamaño. Usa Eliminar objeto.
+   - Las formas son representativas, NO contienen medición de área ni longitud.
+   - Puedes cambiar el color del borde y el tamaño de texto.
+
+2. Panel CAPAS: sección para crear categorías personalizadas, con nombre y color.
+   Aparecen en Dibujo, Capas, Totales, CSV y tabla DXF. No se eliminan las
+   categorías predeterminadas de C.D., C.A., Tierra, etc.
+
+3. EXPORTACIONES:
+   - PNG: opción independiente para incluir / ocultar formas, notas e imágenes.
+   - Editor de láminas y reporte: control independiente para mostrar objetos.
+   - JSON / ZIP: se guardan las categorías propias y los objetos de cada foto,
+     incluidas imágenes PNG superpuestas.
+   - DXF: conserva el comportamiento anterior, exporta la tabla de longitudes
+     y agrega las categorías propias. Las formas representativas NO generan
+     geometría CAD ni afectan los totales.
+
+SEGURIDAD / DATOS
+   El proyecto sigue funcionando localmente. Los archivos PNG se guardan como
+   datos del proyecto, no se envían a servidores de FV360. No publiques fotos
+   de clientes ni respaldos JSON/ZIP en un repositorio GitHub público.
+
+ACTUALIZACIÓN EN MÓVIL
+   Haz primero un respaldo ZIP o JSON de los levantamientos importantes.
+   Descomprime este paquete y reemplaza los archivos de tu repositorio de
+   GitHub Pages (incluidos index.html, app.js, styles.css y sw.js), manteniendo
+   las carpetas relativas. No elimines datos de Safari/Chrome ni desinstales
+   la PWA para actualizar; se ha cambiado la versión del caché del SW.
+   Espera a la publicación de GitHub Pages, abre con conexión y cierra/vuelve
+   a abrir FV360 desde el icono de la pantalla de inicio.
+
+PRUEBAS DEL ENTORNO
+   Se verificó sintaxis JS, creación de objetos, JSON completo, recuperación,
+   imágenes exportadas PNG, categorías propias y tabla DXF con ezdxf.
+   Falta confirmar la interacción en iPhone/Android reales con tus fotos.

@@ -1,0 +1,62 @@
+FV360 STUDIO — ACTUALIZACION DE ACCESO RAPIDO Y DESPLAZAMIENTO
+================================================================
+
+VERSIONES: Mobile v13 / PC v16
+Base: FV360 Mobile v12 y FV360 Studio PC v15 aprobadas.
+
+CAMBIO 1. DESPLAZARSE POR LA PAGINA SIN PERDER UNA SELECCION
+- En un telefono, usa Editar y selecciona una trayectoria.
+- Desliza el dedo hacia arriba o abajo COMENZANDO EN UN AREA LIBRE del visor.
+- La pagina se desplazara y la linea seguira seleccionada.
+- Puedes tambien deslizar desde un segmento seleccionado que no sea un vertice.
+- Arrastrar un vertice mantiene la edicion habitual de geometria.
+- Al seleccionar una nota o una figura, el espacio libre del visor permite
+  llegar a los controles sin deseleccionarla.
+- En modo Mano, arrastrar continua MOVIENDO LA FOTO y no la pagina.
+- En modo Trazar, el toque sin desplazamiento anade el punto; un movimiento
+  vertical del dedo sirve para desplazar la pagina sin crear un punto.
+- PC mantiene la edicion con mouse y sus controles anteriores.
+
+CAMBIO 2. VALORES JUNTO AL VISOR
+- Al seleccionar una linea aparece inmediatamente BAJO LA FOTO un panel:
+  Ruta / tramo, longitud real (m), Aplicar, y Ajustes desplegables.
+- El campo Longitud usa la MISMA ACCION de guardado que el inspector original.
+  No se generan medidas duplicadas.
+- Los ajustes incluyen categoria, grosor, patron, color, tamano y posicion
+  de cotas. El panel Dibujo original conserva todas sus herramientas.
+- Para notas, rectangulos, circulos, poligonos y PNG, los ajustes rapidos
+  incluyen tamano, escala y color segun el tipo de objeto.
+- La nota seleccionada puede abrir el editor de texto con un boton.
+- El panel completo se alcanza manualmente con «Todas las propiedades».
+
+COMPATIBILIDAD Y SEGURIDAD
+- No se cambiaron los formatos de proyectos JSON/ZIP.
+- Permanecen los reportes multiples, el visor 360, las fotos planas,
+  el organizador, las capas, notas, PNG, PDF y la tabla DXF R12.
+- Se mantuvo intacto el autoguardado local y el respaldo manual.
+- Exporta un ZIP o JSON antes de cualquier actualizacion en dispositivos.
+- NO elimines datos del navegador ni desinstales la PWA para actualizarla.
+
+PUBLICACION DE MOBILE EN GITHUB PAGES
+1. Extrae FV360_Mobile_v13_Desplazamiento_Medidas.zip.
+2. En el repositorio de GitHub, reemplaza los archivos con el contenido
+   de la carpeta FV360_Mobile_GitHub_v13, directamente en la raiz.
+3. INCLUYE LOS ARCHIVOS NUEVOS viewer-quick-edit.js y viewer-quick-edit.css.
+4. Incluye sw.js actualizado y conserva la carpeta icons.
+5. Espera el despliegue de GitHub Pages, abre la app con internet y
+   vuelve a entrar si inicialmente ves la pagina guardada en cache.
+
+PC
+- Extrae el ZIP y abre index.html de FV360_Studio_PC_v16.
+- Mantiene la fotografia DJI de demostracion y todas las funciones previas.
+
+PRUEBAS REALIZADAS EN CHROMIUM AUTOMATIZADO
+- Interfaz movil simulada y escritorio.
+- Desplazamiento vertical desde el visor conservando la ruta y sus vertices.
+- Edicion de longitud 12.75 m, patron, grosor, tamano y posicion de cota.
+- Edicion de escala 140%, tipografia y alineacion de una nota.
+- Exportacion PNG, ZIP, JSON, reporte PDF y DXF.
+- Auditoria DXF con ezdxf: sin errores.
+- No se ha probado aun en Safari/iPhone fisico.
+
+FV360 Studio · Herramientas de levantamiento y representacion esquematica.

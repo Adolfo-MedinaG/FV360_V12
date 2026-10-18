@@ -1,0 +1,90 @@
+/* FV360: viewer-first responsive controls. Changes only the layout, never its tools or measurements. */
+.fv-view-toggle { display:none; }
+.fv-viewer-context { display:none; }
+@media (max-width:760px) {
+  .main-area { padding:10px 10px 13px; gap:7px; }
+  .project-strip { padding:0 2px; }
+  .toolbar { flex-wrap:nowrap; gap:4px; padding:4px 5px; overflow-x:auto; max-width:100%; }
+  .toolbar .tool { min-height:37px; min-width:41px; padding:5px 9px; flex:none; white-space:nowrap; }
+  .toolbar .tool span:last-child { font-size:10px; }
+  .viewer {
+    height:min(68dvh,730px);min-height:min(370px,60dvh);max-height:none;
+    scroll-margin-top:105px;touch-action:none;
+  }
+  .viewer-top { top:7px;left:7px;right:7px; }
+  .viewer-chip { padding:5px 7px; font-size:9px;letter-spacing:.25px;border-radius:8px; }
+  .viewer-chip.dim-chip { font-size:9px; }
+  /* Do not cover the photographic area with instructions during tracing. */
+  .viewer-guide, #viewer .viewer-guide { display:none!important; }
+  .viewer-bottom {
+    position:absolute;left:auto;right:8px;top:43px;bottom:auto;
+    width:auto;display:flex;flex-direction:column;justify-content:flex-end;
+    align-items:flex-end;gap:6px;flex-wrap:nowrap;pointer-events:none;z-index:16;
+  }
+  .viewer-buttons {
+    display:flex;align-items:center;justify-content:flex-end;gap:3px;
+    padding:3px;border-radius:12px;border:1px solid rgba(202,214,226,.23);
+    background:rgba(17,21,27,.78);backdrop-filter:blur(10px);
+    pointer-events:auto;flex-wrap:nowrap;
+  }
+  .viewer-buttons button, .viewer-buttons button:first-child,
+  .viewer-buttons .fv-hand-pan, .viewer-buttons .fv-hand-pan:first-child {
+    display:inline-flex;align-items:center;justify-content:center;
+    width:32px;min-width:32px;height:32px;min-height:32px;padding:0;
+    border-radius:8px;font-size:17px;line-height:1;letter-spacing:0;
+    border:1px solid transparent;background:transparent;color:#f0f4f8;
+    box-shadow:none;
+  }
+  .viewer-buttons .fv-hand-pan.is-active { background:#e6edf4;color:#1d2933;border-color:#e6edf4; }
+  .viewer-buttons .fv-control-word { display:none; }
+  .viewer-buttons .fv-control-icon { width:17px;height:17px;display:block;flex:none; }
+  .viewer-buttons .fv-view-toggle { display:inline-flex; }
+  .viewer-buttons .fv-view-toggle[aria-expanded="true"] { background:#495a69;border-color:#8da1b6; }
+  .viewer-buttons #btnFront,
+  .viewer-buttons #btnMinus,
+  .viewer-buttons #btnPlus { display:none; }
+  body.fv-view-tools-expanded .viewer-buttons #btnFront,
+  body.fv-view-tools-expanded .viewer-buttons #btnMinus,
+  body.fv-view-tools-expanded .viewer-buttons #btnPlus { display:inline-flex; }
+  .viewer-buttons #btnFront { width:41px;min-width:41px;font-size:8px;letter-spacing:.2px;font-weight:750; }
+  .fv-zoom-control {
+    display:none!important;order:2;min-width:0;max-width:none;
+    width:min(244px,calc(100vw - 38px));margin:0;padding:7px 9px;
+    flex:0 0 auto!important;height:42px;min-height:42px;align-items:center;
+    background:rgba(17,23,30,.92);border:1px solid #6b7b8a;
+    border-radius:10px;box-shadow:0 7px 22px #0009;pointer-events:auto;
+    flex-direction:row;gap:7px;
+  }
+  body.fv-view-tools-expanded .fv-zoom-control { display:flex!important; }
+  .fv-zoom-control label { font-size:10px;flex:0 0 auto; }
+  .fv-zoom-control input { min-width:65px;width:auto;flex:1; }
+  .fv-zoom-control button { flex:none;min-height:28px; }
+  .mobile-finish:not([hidden]) { right:auto;left:8px;bottom:8px;font-size:11px;padding:9px 10px;max-width:calc(100% - 132px); }
+  .draw-instruction { max-width:min(250px,74%); }
+  .status-line { flex-wrap:wrap;gap:6px; }
+  .fv-viewer-context:not([hidden]) {
+    display:inline-flex;align-items:center;justify-content:center;gap:4px;
+    min-height:25px;max-width:100%;font-size:10px;line-height:1.2;
+    color:#d5e3ee;background:#293745;border:1px solid #506274;
+    border-radius:7px;padding:4px 8px;white-space:normal;text-align:left;
+  }
+  .inspector { overflow-anchor:none; }
+  /* Standalone PC HTML shares the mobile layout at narrow widths. */
+  .fv-pc-project-status { display:flex;flex-wrap:wrap;align-items:center;gap:7px;padding:8px 11px; }
+  .fv-pc-project-status>span:nth-child(2) { flex:1 1 100%;min-width:0;overflow-wrap:anywhere; }
+  .fv-pc-project-status>button { margin-left:auto; }
+
+  .toast { max-width:min(250px,calc(100vw - 24px));left:auto;right:12px;padding:7px 10px;font-size:10px;line-height:1.35; }
+}
+@media (max-width:390px) {
+  .viewer-buttons { gap:2px; }
+  .viewer-buttons button, .viewer-buttons button:first-child,
+  .viewer-buttons .fv-hand-pan, .viewer-buttons .fv-hand-pan:first-child {
+    width:29px;min-width:29px;height:29px;min-height:29px;
+  }
+  .viewer-buttons #btnFront { min-width:40px;width:40px; }
+  .main-area { padding-left:7px;padding-right:7px; }
+}
+@media (prefers-reduced-motion:reduce) {
+ .fv-viewer-context { transition:none!important; }
+}

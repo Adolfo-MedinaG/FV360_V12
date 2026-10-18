@@ -1,0 +1,40 @@
+/* FV360 Studio - contextual value input beneath the viewer; original inspectors remain. */
+.fv-quick-edit[hidden],.fv-quick-details[hidden]{display:none!important}
+.fv-quick-edit{border:1px solid #54616d;background:linear-gradient(135deg,#273039,#1c222a);color:#eef2f7;
+  border-radius:11px;padding:9px 12px;min-width:0;box-shadow:0 4px 16px #0003}
+.fv-quick-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 6px}
+.fv-quick-top strong{font-size:12px;font-weight:780;letter-spacing:.1px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fv-quick-top span{font-size:10px;color:#b4c1cf;white-space:nowrap}
+.fv-quick-row{display:flex;align-items:end;gap:7px;min-width:0}
+.fv-quick-row label{font-size:11px;line-height:1.25;color:#d2dbe5;min-width:0;flex:1}
+.fv-quick-row input[type=number]{display:block;margin-top:4px;border:1px solid #637080;background:#151b23;color:#fff;
+  padding:8px 9px;border-radius:7px;font-size:16px;min-height:38px;width:100%;font-variant-numeric:tabular-nums;outline-offset:1px}
+.fv-quick-row input[type=range]{display:block;width:100%;margin-top:5px;accent-color:#aebfcd}
+.fv-quick-row label strong{font-weight:750}
+.fv-quick-row button,.fv-q-full{background:#384452;border:1px solid #647487;color:#f4f7fa;
+  border-radius:8px;padding:9px 11px;font-size:11px;font-weight:700;min-height:38px;white-space:nowrap}
+.fv-quick-row .fv-quick-primary{background:#e8edf3;color:#18222c;border-color:#e8edf3}
+.fv-quick-row button:disabled{opacity:.5}
+.fv-quick-details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:10px;padding-top:10px;
+ border-top:1px solid #46515d}
+.fv-quick-details label{font-size:10px;display:flex;flex-direction:column;gap:5px;color:#d0dbe8;min-width:0}
+.fv-quick-details select,.fv-quick-details input[type=color]{width:100%;border-radius:6px;border:1px solid #576678;
+ color:#ebf0f5;background:#212b36;padding:6px;height:34px;font-size:12px;min-width:0}
+.fv-quick-details input[type=color]{padding:3px}
+.fv-quick-details .fv-q-check{flex-direction:row;align-items:center;justify-content:start}
+.fv-quick-details input[type=checkbox]{accent-color:#b3c5d5;width:19px;height:19px}
+.fv-q-full{width:100%;grid-column:1/-1;background:#303a45}
+@media(max-width:760px){
+ .fv-quick-edit{padding:8px 9px;border-radius:10px;box-shadow:none}
+ .fv-quick-top span{font-size:9px}
+ .fv-quick-row{gap:6px;align-items:end}
+ .fv-quick-row button{padding:7px 9px;font-size:11px;min-height:39px}
+ .fv-quick-row input[type=number]{font-size:16px!important;min-height:39px}
+ .fv-quick-details{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .fv-quick-details select{font-size:16px!important}
+}
+@media(max-width:360px){.fv-quick-row .fv-quick-more{font-size:10px;padding:7px 5px}.fv-quick-top span{display:none}}
+/* Keep the note confirmation above iPhone's fixed navigation instead of underneath it. */
+@media(max-width:760px){
+ #fvNoteEditActions:not([hidden]){bottom:calc(78px + env(safe-area-inset-bottom,0px))!important}
+}

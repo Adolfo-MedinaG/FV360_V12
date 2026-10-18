@@ -1,0 +1,25 @@
+FV360 STUDIO - MEJORAS V11 / MOBILE V8
+=======================================
+Esta versión parte de FV360 Studio PC v10 / Mobile v7.
+
+CAMBIOS NUEVOS
+1. Botón GUARDAR: icono vectorial blanco con contraste en la barra de gestión.
+2. SELECCIÓN CONTEXTUAL: toca una ruta para abrir Dibujo; toca una figura o PNG para Objetos; toca una nota para Texto. En móvil desplaza automáticamente el panel pertinente al campo de visión cuando es necesario.
+3. BORRADOR: nuevo botón junto a Editar línea. Actívalo y toca una ruta, nota, rectángulo, polígono, círculo o PNG para eliminarlo. El botón Borrar anterior sigue disponible y también puede eliminar objetos seleccionados. En el apartado Texto aparece Eliminar nota seleccionada.
+4. CARPETAS: la pantalla de inicio tiene dos vistas, Proyectos recientes y Carpetas. Carpetas presenta tarjetas, permite crear, renombrar y eliminar carpetas. Eliminar una carpeta nunca elimina los proyectos que contiene: sus proyectos pasan a Sin carpeta. Sigue disponible el selector Mover a carpeta.
+
+FUNCIONES QUE SE CONSERVAN
+Fotografías panorámicas 360° y planas, trazos, mediciones, patrones, notas, PNG superpuestos, figuras editables, categorías, reportes independientes, biblioteca de imágenes, editor de láminas, guardado JSON y ZIP, exportación PNG/PDF/CSV y tabla DXF R12.
+
+ACTUALIZAR GITHUB PAGES
+- Antes de actualizar, descarga una copia JSON o ZIP de cada proyecto importante.
+- Sustituye los archivos de la raíz del repositorio con el contenido de la carpeta FV360_Mobile_GitHub_v8 (no subas la carpeta anidada como único elemento).
+- Incluye el nuevo archivo workspace-refinement.js y el nuevo sw.js.
+- Comprueba que GitHub Pages terminó el despliegue y vuelve a abrir FV360 con conexión a internet.
+- No borres los datos de la PWA ni la desinstales para actualizar; el historial local se perdería.
+
+CARPETAS Y PRIVACIDAD
+Las carpetas creadas dentro de FV360 son etiquetas locales de organización. No son directorios físicos del teléfono o de Google Drive, ni se sincronizan entre dispositivos.
+
+PRUEBAS
+Sintaxis validada con Node.js; UI y flujos comprobados en Chromium automatizado para escritorio y tamaño móvil; archivos DXF generados y auditados con ezdxf sin errores. La prueba en iPhone físico queda a cargo del usuario.

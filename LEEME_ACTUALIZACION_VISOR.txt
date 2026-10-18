@@ -1,0 +1,65 @@
+FV360 STUDIO - ACTUALIZACION DE ERGONOMIA DEL VISOR
+=================================================
+
+Version movil GitHub Pages: v12
+Version PC: v15
+
+OBJETIVO DE ESTA ACTUALIZACION
+No se modificaron las mediciones, los proyectos, el motor CAD, las fotografias ni
+el generador de reportes. Se optimizo el layout del visor en pantallas pequenas
+y se corrigio la navegacion automatica al seleccionar elementos.
+
+1. VISOR PRIORIZADO EN TELEFONOS
+- El grupo de botones sobre la fotografia ocupa menos espacio.
+- Mano: mover la foto sin alterar lineas, vertices ni notas.
+- Opciones de vista (icono de controles): muestra u oculta Frente, +, -, y
+  deslizador de Zoom. Todo queda disponible, pero no cubre la foto por defecto.
+- Pantalla completa sigue disponible.
+- Los controles se situan junto a la esquina superior derecha del visor, debajo
+  del indicador de rumbo, para que puedas usarlos antes de desplazarte por la pagina.
+- Tocar la foto despues de abrir los ajustes contrae el menu de vista.
+- Los controles de trazado siguen accesibles en la barra superior desplazable.
+
+2. HERRAMIENTAS CONTEXTUALES SIN SALTOS
+- Tocar una linea activa la pestana Dibujo en el inspector.
+- Tocar una figura o PNG activa Objetos.
+- Tocar una nota activa Texto.
+- La app NO desplaza automaticamente el documento hasta el inspector.
+- Puedes continuar moviendo vertices y objetos sobre la fotografia.
+- Al desplazarte manualmente hacia abajo encuentras las propiedades preparadas.
+- Una indicacion discreta debajo del visor informa donde estan las propiedades.
+  Si prefieres, puedes pulsarla para abrir el inspector expresamente.
+
+3. COMPATIBILIDAD Y RESPALDOS
+- Se conserva el formato de los proyectos JSON / ZIP.
+- Se conservan reportes independientes, fotos 360 y fotos planas, categorias,
+  capas, sumas por tipo, textos, formas, PNG, PDF, ZIP de laminas y tabla DXF.
+- No borres los datos de Safari/Chrome ni desinstales la PWA antes de exportar
+  un respaldo JSON o ZIP de los proyectos importantes.
+
+4. ACTUALIZACION PARA GITHUB PAGES
+- Exporta primero un respaldo de tus proyectos importantes.
+- Extrae el ZIP movil. Entra a la carpeta FV360_Mobile_GitHub_v12.
+- Sube a la raiz de tu repositorio TODO el contenido de esa carpeta,
+  conservando index.html en la raiz. Reemplaza los archivos anteriores.
+- Incluye los nuevos viewer-mobile-layout.css y viewer-mobile-layout.js,
+  ademas del sw.js actualizado. No subas carpetas privadas de clientes.
+- Espera a que GitHub Pages termine el despliegue, abre FV360 con Internet,
+  espera a que actualice y luego vuelve a abrir la aplicacion instalada.
+- Mantener el mismo repositorio conserva tu enlace habitual.
+
+5. VERSION PC
+- Extrae el ZIP de PC y abre FV360_Studio_PC_v15/index.html.
+- El layout ancho de PC conserva la barra y el inspector de las versiones previas.
+- Si abres la version PC en una ventana pequena tambien aparecera el layout compacto.
+
+6. COMPROBACIONES
+- Se comprobo en un navegador automatizado el dibujo de una ruta de 12.75 m,
+  seleccion de linea y nota sin salto automatico de pantalla, y menus de vista.
+- Se descargaron JSON, ZIP de proyecto, PNG, PDF y DXF en ambas versiones.
+- Los DXF de prueba fueron auditados con ezdxf: cero errores y cero correcciones.
+- Las imagenes y proyectos de las pruebas son simulados.
+- Pendiente: comprobar tacto real y actualizacion PWA en iPhone y Android.
+
+La etiqueta CONTROLES DE VISTA no implica medicion dimensional automatica.
+FV360 sigue utilizando las distancias capturadas por el tecnico en campo.

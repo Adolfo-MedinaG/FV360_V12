@@ -1,0 +1,52 @@
+FV360 STUDIO - ACTUALIZACION DE EDICION DE OBJETOS Y TABLA DXF
+============================================================
+Compatible con proyectos previos version 3/4/5 (JSON y ZIP).
+
+1. DIBUJOS Y FIGURAS
+   Objetos > Rectangulo, Circulo/elipse, Poligono libre, Nota o Colocar PNG.
+   - Rectangulo: arrastra para dibujarlo. En Editar objetos, arrastra
+     cualquier esquina: se convierte automaticamente en un poligono
+     y puedes ajustar independientemente sus cuatro vertices.
+   - Circulo/elipse: arrastra y luego edita los controles laterales y esquinas.
+     Si necesitas deformar libremente su contorno, selecciona el objeto
+     y pulsa "Convertir a vertices libres". Apareceran 16 puntos editables.
+   - Poligono libre: marca al menos tres puntos sobre la fotografia y
+     pulsa "Cerrar figura"; despues mueve los puntos individualmente.
+     Puedes anadir o quitar vertices en la seccion de propiedades.
+   - Escala: selecciona un objeto y cambia "Escala del objeto" (25%-400%).
+     Tambien puedes estirar o achicar arrastrando los controles blancos.
+   - Imagen PNG: se mantiene su transparencia y proporciones naturales.
+     No tiene borde en las exportaciones; en edicion solo aparece
+     la guia punteada del objeto seleccionado para poder moverlo.
+   - Notas: cambia tamano, color, negrita, cursiva, fondo y alineacion
+     izquierda/centrado/derecha/justificado. No modifica mediciones.
+
+2. TABLA DE DISTANCIAS DXF PARA AUTOCAD
+   La tabla NO se ha eliminado: ve a Exportar > AutoCAD, elige las filas
+   y columnas y pulsa "Tabla de distancias - DXF".
+   Tambien se abre desde Totales > Configurar tabla de distancias DXF.
+   En la version movil se puede llegar desde Proyectos > Tabla DXF.
+   El archivo generado es DXF R12 con textos y lineas editables.
+   Las cotas son las distancias reales capturadas por el tecnico;
+   las figuras decorativas no suman metros.
+
+3. PROYECTOS Y RESPALDOS
+   Guarda regularmente JSON o ZIP ANTES de actualizar.
+   Puedes importar proyectos anteriores y continuar editando.
+   La aplicacion movil sigue guardando su biblioteca localmente.
+   No borres el almacenamiento del navegador ni desinstales FV360
+   sin tener un respaldo ZIP de tus visitas.
+
+4. PUBLICAR EN GITHUB PAGES (SOLO LA VERSION MOBILE)
+   En tu repositorio FV360_MOBILEV2 reemplaza los archivos existentes
+   con los contenidos de la carpeta FV360_Mobile_GitHub_v4.
+   Subelos a la raiz, junto a index.html, no dentro de una subcarpeta.
+   Conserva tu nombre de repositorio y tu enlace de GitHub Pages.
+   Espera el despliegue de Pages, abre la web con conexion y recarga.
+   El cache PWA cambio a fv360-mobile-shell-v1.0.4-shapes-and-dxf.
+   No subas proyectos de clientes ni fotografias privadas a GitHub.
+
+5. LIMITACIONES
+   Las figuras son anotaciones visuales, NO medidas a escala.
+   DXF solo contiene la tabla de distancias, no un DWG nativo.
+   iOS y Android requieren prueba final real en el dispositivo.

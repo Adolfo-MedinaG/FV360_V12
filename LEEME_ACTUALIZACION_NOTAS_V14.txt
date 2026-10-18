@@ -1,0 +1,52 @@
+FV360 STUDIO - ACTUALIZACION DE NOTAS E ICONO (17 OCT 2026)
+================================================================
+
+VERSIONES
+- PC: FV360 Studio v14
+- Mobile/PWA: FV360 Mobile v11
+
+CAMBIOS LIMITADOS A DOS PUNTOS
+
+1) Inicio / Proyectos recientes
+   - El boton de ocultar proyecto se sustituyo por un icono vectorial discreto.
+   - El icono de ojo tachado oculta la tarjeta del inicio sin borrar el proyecto.
+   - En "Ver ocultos", el icono del ojo permite restaurarlo.
+   - Incluye textos de ayuda y etiquetas accesibles.
+
+2) Texto y notas
+   - Una sola capa de texto visible durante la edicion; ya no aparece duplicado.
+   - Toque/clic para seleccionar; arrastrar desde el interior mueve la nota.
+   - Segundo toque/clic sobre la nota seleccionada, o el boton "Editar contenido", abre el editor.
+   - Al CREAR una nota, se abre el editor para escribirla de inmediato.
+   - "Aplicar" confirma el texto; "Cancelar" restaura el contenido anterior.
+   - Esc cancela y Ctrl/Cmd+Enter confirma desde el teclado.
+   - No cambia la ubicacion ni el tamano de la nota al editar contenido.
+   - El tamano y las dimensiones se ajustan con los controles existentes, fuera del modo texto.
+   - El campo de texto de propiedades se bloquea temporalmente durante la edicion directa para evitar conflictos.
+
+FUNCIONES QUE NO SE MODIFICARON
+Visor 360 y foto plana, zoom/Mano, trazados, vertices, medidas,
+capas y categorias, varios reportes, fotos PNG, poligonos,
+biblioteca y carpetas, PDF, PNG, CSV, tabla DXF, JSON y ZIP.
+
+PRUEBAS REALIZADAS
+- Ambos paquetes: creacion, cambio de texto, Aplicar/Cancelar,
+  movimiento por arrastre, persistencia de coordenadas durante la edicion.
+- PNG anotado, JSON exportado e importado, ZIP completo, PDF fotografico.
+- Tabla DXF R12 auditada con ezdxf sin errores.
+- JS verificado sintacticamente, y comparado con la version anterior.
+- Simulacion automatizada de escritorio y ventana movil.
+- Pruebas reales en iPhone/Android y AutoCAD nativo: pendientes.
+
+ACTUALIZACION EN GITHUB PAGES (SOLO MOBILE)
+1. Antes de actualizar, exporta un ZIP de tus proyectos importantes.
+2. Descomprime el ZIP y SUBE EL CONTENIDO de FV360_Mobile_GitHub_v11
+   a la raiz de tu repositorio, reemplazando los archivos existentes.
+3. Confirma que subiste app.js, index.html, fv360-polish.css,
+   workspace-plus.js, workspace-plus.css y sw.js actualizados.
+4. Espera a que GitHub Pages termine. Abre la app con internet.
+5. NO desinstales la PWA ni borres datos del navegador para actualizarla:
+   tus proyectos locales podrian perderse.
+
+FV360 funciona con almacenamiento local: siempre conserva un respaldo
+JSON/ZIP externo de tus levantamientos importantes.

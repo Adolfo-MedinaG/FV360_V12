@@ -1,0 +1,65 @@
+FV360 STUDIO - ACTUALIZACION DE CORRECCIONES
+PC v13 / MOBILE v10 - 17 de octubre de 2026
+
+Esta actualizacion conserva las funciones anteriores de FV360, incluida la edicion
+de trayectorias y vertices, anotaciones, PNG, multiples reportes, JSON, ZIP,
+PDF, CSV y la tabla de distancias DXF. No convierte fotos en planos a escala.
+
+1. OCULTAR PROYECTO DEL INICIO (SIN ELIMINARLO)
+- Inicio > Proyectos recientes > boton "Ocultar del inicio" en la tarjeta.
+- La tarjeta deja de verse en Proyectos recientes, pero el proyecto local,
+  sus fotografias, rutas, notas, mediciones y respaldos NO se eliminan.
+- Inicio > "Ver ocultos (N)" permite consultar las tarjetas ocultas.
+- Pulsa "Restaurar en inicio" para devolver una tarjeta a la lista normal.
+- Las carpetas siguen mostrando los proyectos, incluso si estan ocultos de
+  la vista principal de proyectos recientes.
+- La preferencia de ocultar se guarda en ESTE navegador/dispositivo; no
+  se sincroniza con otros navegadores ni se incrusta en el JSON del proyecto.
+
+2. ZOOM Y MANO - FOTOGRAFIAS PLANAS
+- Utiliza + / - o la barra de zoom para acercarte, hasta 600 %.
+- Al ampliar una foto plana, el modo "Mano" se activa automaticamente cuando
+  no estas a mitad de una ruta, para evitar editar vertices accidentalmente.
+- Pulsa "Mano" y arrastra para mirar distintas zonas de la foto.
+- Para modificar una ruta o figura, selecciona explicitamente "Editar linea"
+  o "Objetos > Editar" cuando termines de desplazar el encuadre.
+- En PC tambien puedes mantener Espacio durante el movimiento para utilizar
+  temporalmente la mano mientras tienes otra herramienta seleccionada.
+- La foto y las anotaciones usan el mismo desplazamiento en WebGL y al exportar.
+- Desplazar el encuadre no cambia longitudes reales ni coordenadas de las rutas.
+- Para volver al encuadre completo utiliza "FRENTE" o "100%".
+
+3. NOTAS VISIBLES EN PREVISUALIZACIONES Y EXPORTACIONES
+- Las notas siguen visibles en el canvas durante la edicion.
+- El texto se reduce automaticamente si un recuadro pequeno no permite
+  mostrarlo a su tamano original. El tamano configurado se conserva en datos.
+- La exportacion PNG y las laminas del reporte incluyen texto y fondo.
+- Puedes ajustar el recuadro y el tamano de letra en el editor de texto.
+
+PRUEBAS REALIZADAS EN NAVEGADOR AUTOMATIZADO
+- Version PC y version movil con foto vertical (800 x 1200).
+- Crear ruta, registrar 12.75 m y navegar al 300 % sin cambiar la ruta.
+- Crear nota y exportar PNG con texto visible sobre la fotografia.
+- Exportar DXF R12 y auditar sin errores con ezdxf (12.75 m presentes).
+- Exportar JSON y volverlo a importar, conservando foto, nota y medidas.
+- Generar reporte PDF con las imagenes raster.
+- Ocultar, visualizar y restaurar una tarjeta de proyecto sin eliminarla.
+- Revision estatica: ningun ID de control anterior se elimino.
+
+LIMITACIONES
+- Los ensayos se realizaron en Chromium simulado. Verifica los gestos y el
+  rendimiento de WebGL directamente en tu iPhone y Android.
+- La biblioteca de proyectos depende del almacenamiento local del navegador;
+  conserva respaldos JSON y ZIP en ubicaciones externas.
+- En GitHub Pages, la app sigue accesible para quien tenga el enlace; no
+  publiques fotografias privadas ni respaldos dentro del repositorio.
+
+ACTUALIZAR PWA DESDE GITHUB
+1. Guarda un respaldo JSON/ZIP de cada proyecto importante.
+2. Reemplaza en la raiz del repositorio los archivos que contiene la carpeta
+   FV360_Mobile_GitHub_v10 (index.html, JS, CSS, sw.js, manifest y icons).
+3. Haz Commit y Push, espera a que GitHub Pages concluya la publicacion.
+4. Abre la pagina una vez con internet para actualizar el Service Worker.
+   El nuevo SW elimina caches de versiones antiguas de FV360, NO IndexedDB.
+5. Cierra y vuelve a abrir la app. No desinstales la PWA ni borres los datos
+   del sitio para forzar la actualizacion.

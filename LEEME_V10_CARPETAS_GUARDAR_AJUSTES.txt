@@ -1,0 +1,82 @@
+FV360 STUDIO - ACTUALIZACION DE ORGANIZACION Y CONFIGURACION
+PC v10 / Mobile v7 - Octubre de 2026
+==========================================================
+
+BASE CONSERVADA
+- Motor de fotos convencionales y panoramas 360, trazos, vertices y cotas.
+- Figuras, imagenes PNG superpuestas, notas, capas y categorias propias.
+- Reportes independientes, biblioteca compartida de fotos y orden de laminas.
+- Descargas PNG, PDF, ZIP, CSV y tabla de longitudes DXF R12.
+- Importacion de proyectos JSON/ZIP antiguos y almacenamiento local.
+
+1. CARPETAS EN EL INICIO
+En la pantalla Inicio, pulsa «+ Nueva carpeta». Puedes arrastrar una tarjeta
+sobre la carpeta para organizarla. En iPhone y Android tambien se puede usar
+el selector «Mover a carpeta» de cada tarjeta. Las carpetas son etiquetas
+locales del historial de este navegador: mover un proyecto NO mueve archivos
+del telefono y nunca borra ni modifica sus fotografias, rutas o reportes.
+Cada carpeta se puede renombrar. Al borrar una carpeta, sus proyectos
+regresan a «Sin carpeta». Incluye busqueda, favoritos y ordenacion.
+
+2. GUARDAR / GUARDAR COMO
+La nueva barra de documento muestra el estado del archivo.
+- Guardar: Ctrl+S (Windows) / Cmd+S (Mac), o el boton visible.
+- Guardar como: Ctrl+Shift+S / Cmd+Shift+S, o el boton visible.
+- Chrome/Edge: cuando hay permiso, «Guardar como» permite seleccionar
+  una ruta y «Guardar» vuelve a sobrescribir el mismo JSON en esa sesion.
+- iPhone/Safari: por permisos del sistema web no se puede sobrescribir
+  automaticamente un archivo arbitrario en Archivos. Se abre Compartir o se
+  descarga una copia JSON; hay que comprobar que quedo guardada.
+- El guardado local automatico anterior SE CONSERVA como borrador de
+  recuperacion, pero NO equivale a actualizar el archivo externo.
+- El ZIP sigue siendo una copia completa, util para compartir y respaldar.
+- Los proyectos sin fotografias tambien pueden exportarse como JSON.
+
+3. AVISO DE CAMBIOS SIN GUARDAR
+Al crear o abrir otro proyecto habiendo modificaciones sin exportar se ofrece:
+«Guardar archivo y continuar», «No guardar archivo» y «Cancelar».
+«No guardar archivo» NO borra el borrador de recuperacion local.
+Los navegadores pueden limitar las alertas al cerrar pestañas o apps;
+por eso no debes confiar unicamente en el aviso de cierre.
+
+4. AJUSTES DE LA APP
+Pulsa «Ajustes» en la barra del editor o «Configurar» en Inicio.
+- Perfiles: Completo, Visita en campo, Documentacion.
+- Casillas: mostrar/ocultar cada herramienta rapida y panel.
+- Orden: mover herramientas y paneles con flechas arriba/abajo.
+- Tamaño de letra del interfaz: compacto, normal, grande.
+- Reducir movimiento; contraste mejorado; aviso al salir.
+- Restaurar ajustes originales.
+- Exportar/Importar ajustes para reutilizar configuraciones.
+
+CONFIGURACION Y SEGURIDAD
+Las preferencias, favoritos y carpetas se guardan localmente en el
+navegador, separadas de los archivos JSON de los levantamientos.
+No necesitan cuentas ni servidores y no publican los datos del cliente.
+No elimines los datos del navegador sin antes exportar ZIP/JSON.
+
+ACTUALIZAR GITHUB PAGES (SOLO MOBILE)
+1. Haz una copia externa JSON/ZIP de tus proyectos importantes.
+2. Descomprime el paquete Mobile.
+3. Sustituye los archivos de la raiz del repositorio por el contenido de la
+   carpeta FV360_Mobile_GitHub_v7. Conserva index.html en la raiz.
+4. Debes subir TAMBIEN workspace-plus.js, workspace-plus.css y sw.js, ademas
+   de mantener todos los archivos que ya venian en el paquete.
+5. Comprueba que Pages termine el despliegue y abre la PWA con internet.
+6. No desinstales FV360 ni borres datos de Safari/Chrome para actualizar.
+
+PRUEBAS REALIZADAS
+- Parseo JavaScript de PC y Mobile sin errores.
+- Inicializacion de todos los scripts de ambas interfaces, sin errores JS.
+- Carpetas locales, movimiento, favoritos, ajustes y aviso de cambios.
+- Exportacion e importacion de un proyecto JSON sin fotografias.
+- «Guardar como» seguido de «Guardar»: se sobreescribio el mismo archivo
+  simulado de manera consecutiva con File System Access, sin abrir otro selector.
+- DXF R12 exportado por PC y Mobile: 59 entidades y cero errores de auditoria
+  con ezdxf en cada uno.
+- Archivos antiguos del motor DXF mantenidos identicos a la version aprobada.
+
+LIMITACIONES DE VALIDACION
+Las comprobaciones del navegador se realizaron en un entorno automatizado
+con almacenamiento simulado. Queda pendiente la prueba real de persistencia
+local, permisos de archivos y aviso de cierre en Safari iOS y Android.

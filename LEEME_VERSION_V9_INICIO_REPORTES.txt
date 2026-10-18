@@ -1,0 +1,36 @@
+FV360 STUDIO MOBILE - ACTUALIZACION DE INICIO, REPORTES Y BIBLIOTECA (V6)
+=======================================================================
+
+NOVEDADES
+1) Pantalla de inicio con saludo segun la hora, biblioteca local y proyectos recientes.
+2) Nuevo proyecto sin reiniciar; se da nombre y se abre un proyecto limpio.
+3) Seleccionar lineas, formas o notas abre automaticamente el inspector contextual.
+4) Un apartado destacado 'Texto' concentra notas, formato y edicion.
+5) Cada reporte tiene un tema oscuro propio (hasta seis estilos de rotacion).
+6) Galeria de fotos del reporte activo y biblioteca general compartida de originales.
+   Puedes agregar una foto al reporte sin duplicar los bytes originales y
+   quitarla de ese reporte sin eliminarla de otros reportes.
+
+HERRAMIENTAS CONSERVADAS
+Visor 360 y fotos planas, trazado con vertices, medidas manuales,
+capas personalizadas, patrones de linea, formas, PNG superpuestos,
+notas, editor de laminas, informes PDF, exportacion PNG, JSON, ZIP,
+CSV y tabla de distancias DXF (AutoCAD).
+
+INSTALACION EN GITHUB PAGES
+1. ANTES DE ACTUALIZAR, exporta cada proyecto importante en ZIP o JSON.
+2. Copia el contenido de esta carpeta a la raiz de tu repositorio GitHub Pages.
+   Deben quedar index.html, app.js y sw.js en la raiz, no en subcarpeta.
+3. Incluye los archivos nuevos workspace-home.css y workspace-home.js.
+4. Confirma la actualizacion en GitHub Actions/Pages y abre con internet.
+5. No borres los datos de Safari/Chrome ni desinstales la PWA como solucion
+   de actualizacion: podrias eliminar los levantamientos locales.
+
+PRUEBAS Y LIMITACIONES
+- Verificados en navegador automatizado: inicio, nuevo proyecto, dos
+  reportes, biblioteca global, notas, importar un ZIP anterior, PDF,
+  JSON y DXF (auditoria sin errores con ezdxf).
+- Es necesario probar el flujo tactil y el almacenamiento persistente
+  directamente en tus dispositivos iPhone y Android.
+- El almacenamiento local de una PWA no sustituye los respaldos ZIP/JSON.
+- La biblioteca no sincroniza proyectos ni fotografias en la nube.
